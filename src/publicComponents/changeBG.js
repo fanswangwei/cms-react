@@ -1,5 +1,5 @@
 import React from "react"
-
+import "./changeBG.scss";
 class ChangeBG extends React.Component{
     constructor(props) {
         super(props);
@@ -13,12 +13,20 @@ class ChangeBG extends React.Component{
     }
     render(){
         return (
-            <select onChange={this.selectChange}>
-                <option value ="volvo">Volvo</option>
-                <option value ="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
-            </select>
+            <ul className="changeBG">
+                <li className="bg">1</li>
+                <li className="bg2">2</li>
+                <li className="bg3">3</li>
+                <li className="bg5">5</li>
+                <li className="bg6">6</li>
+                <li className="bg7">7</li>
+                <li className="bg8">8</li>
+                <li className="bg9">9</li>
+                <li className="bg10">10</li>
+                <li className="bg11">11</li>
+                <li className="bg12">12</li>
+                <li className="bg13">13</li>
+            </ul>
         )
     }
 }

@@ -48,6 +48,12 @@ class PublicHeader extends React.Component {
         const {changeBG} = this.props;
         return (
             <div className="publicHeader">
+                <div className="themeSelect">
+                    <input type="text" readOnly="true" placeholder="主题选择"/>
+                    <span className="showDown"></span>
+                </div>
+                {/*将APP的回调函数函数传递给changeBG*/}
+                <ChangeBG changeBG={changeBG}/>
                 <ul className="left-items">
                     <li>
                         <a className="news-btn" href="javascript:;" title="消息"></a>
@@ -59,7 +65,6 @@ class PublicHeader extends React.Component {
                         <a className="help-btn" href="javascript:;" title="帮助"></a>
                     </li>
                 </ul>
-                <ChangeBG changeBG={changeBG}/>
                 <div className="right-items" onMouseLeave={this.mouseLeave}>
                     <div className={this.state.personImgHover?'active person-img':'person-img'} onMouseEnter={this.mouseEnter}>
                         <img src={require('./../images/person-img.png')}/>

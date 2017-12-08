@@ -32,6 +32,19 @@
     height: 68px;
     padding-left: 230px;
     position: relative;
+    .themeSelect{
+        position: fixed;
+        left: 5px;
+        top: 5px;
+        input{
+            width: 70px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    }
     .left-items{
         float: left;
         @include over;
