@@ -1,0 +1,123 @@
+@mixin over{
+    overflow: hidden;    
+}
+@mixin mar0{
+    margin: 0;
+}
+@mixin pad0{
+    padding: 0;
+}
+@mixin triangle-top($width, $color){
+    border-width: $width;
+    border-style: solid;
+    border-color: transparent transparent $color transparent;/*透明 透明  灰*/
+}
+@mixin triangle-left($width, $color){    
+    border-width: $width;
+    border-style: solid;
+    border-color: transparent $color transparent transparent;
+}
+@mixin triangle-right($width, $color){
+    border-width: $width;
+    border-style: solid;
+    border-color: transparent transparent transparent $color;
+}
+@mixin triangle-bottom($width, $color){
+    border-width: $width;
+    border-style: solid;
+    border-color: $color transparent transparent transparent;
+}
+.publicHeader{
+    // overflow: hidden;
+    height: 68px;
+    padding-left: 230px;
+    position: relative;
+    .left-items{
+        float: left;
+        @include over;
+        @include pad0;
+        @include mar0;
+        margin-top: 15px;
+        li{
+            list-style: none;
+            float: left;
+            margin: 5px;
+            a{
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                background-size: cover;
+            }
+            a.news-btn{
+                background-image: url('./../images/icons/news.png');
+            }
+            a.warning-btn{
+                background-image: url('./../images/icons/warning.png');
+            }
+            a.help-btn{
+                background-image: url('./../images/icons/help.png');
+            }
+        }
+    }
+    .right-items{
+        @include pad0;
+        float: right;
+        margin: 5px;
+        .person-img{
+            width: 124px;
+            cursor: pointer;
+            overflow: hidden;
+            border: 1px solid transparent;
+            padding: 3px;
+            &.active{
+                border: 1px solid #ddd;
+                h3 a{
+                    color: #fff;
+                }
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                float: left;
+            }
+            h3{
+                margin-left: 5px;
+                float: left;
+                a{
+                    color: #999;
+                    text-decoration: none;
+                }
+            }
+        }
+        .person-info-list{
+            // display: none;
+            padding: 3px;
+            @include mar0;
+            background: #fff;
+            position: absolute;
+            top: 63px;
+            right: 5px;
+            width: 124px;
+            z-index: 99;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-top: 0;
+            li{
+                list-style: none;
+                float: none;
+                a{
+                    color: #999;
+                    text-decoration: none;
+                    &:hover{
+                        color: #333;
+                    }
+
+                }
+            }
+            .divider{
+                border-top: 1px solid #ddd;
+            }
+        }
+    }
+}
